@@ -67,50 +67,50 @@
     }
 
     .chart-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-around; /* Spread the charts evenly */
-    
-    margin: 0 auto;
-}
+        width: 100%;
+        display: flex;
+        justify-content: space-around; /* Spread the charts evenly */
+        
+        margin: 0 auto;
+    }
 
-.chart-box {
-    width: 48%; /* Set default width for larger screens */
-    height: auto;
-    margin: 20px;
-}
-
-/* Responsive layout for smaller screens */
-@media (max-width: 1200px) {
     .chart-box {
-        width: 100%; /* Full width on medium screens */
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .chart-box {
-        width: 100%; /* Full width on small screens */
-        margin: 10px 0;
+        width: 48%; /* Set default width for larger screens */
+        height: auto;
+        margin: 20px;
     }
 
-    .chart-container {
-        flex-direction: column; /* Stack charts vertically */
-        align-items: center; /* Center the charts */
-    }
-}
-
-@media (max-width: 576px) {
-    .chart-box {
-        width: 100%; /* Full width on extra small screens */
-        margin: 5px 0;
+    /* Responsive layout for smaller screens */
+    @media (max-width: 1200px) {
+        .chart-box {
+            width: 100%; /* Full width on medium screens */
+            margin: 10px 0;
+        }
     }
 
-    .chart-container {
-        flex-direction: column; /* Stack charts vertically */
-        padding: 10px;
+    @media (max-width: 768px) {
+        .chart-box {
+            width: 100%; /* Full width on small screens */
+            margin: 10px 0;
+        }
+
+        .chart-container {
+            flex-direction: column; /* Stack charts vertically */
+            align-items: center; /* Center the charts */
+        }
     }
-}
+
+    @media (max-width: 576px) {
+        .chart-box {
+            width: 100%; /* Full width on extra small screens */
+            margin: 5px 0;
+        }
+
+        .chart-container {
+            flex-direction: column; /* Stack charts vertically */
+            padding: 10px;
+        }
+    }
 
     .services {
         text-align: left;

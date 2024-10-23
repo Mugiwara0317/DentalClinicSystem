@@ -54,33 +54,40 @@
         margin-top: 20px;
     }
 
+    .menu-items,
+    .sub-menu-item {
+        padding: 10px;
+        color: #008B7B;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition */
+    }
+
+    .menu-items a,
+    .sub-menu-item a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+    }
+
+    .menu-items:hover, .menu-item:hover,
+    .sub-menu-item:hover {
+        background-color: #008B7B;
+        color: white;
+    }
+
     .menu-item {
         padding: 10px;
         color: #008B7B;
         cursor: pointer;
-        display: flex;
+        display: block;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .menu-item a,
-    .sub-menu-item a {
-        color: inherit; /* Use the color of the parent element */
-        text-decoration: none; /* Remove underline */
-        flex-grow: 1; /* Make the link fill the space */
-    }
-
-    .menu-item:hover,
-    .sub-menu-item:hover,
-    .menu-item.active,
-    .sub-menu-item.active {
-        background-color: #008B7B; /* Keep the hover background */
-        color: white; /* Change text color to white */
-    }
-
-    .menu-item.active a,
-    .sub-menu-item.active a {
-        color: white; /* Ensure links inside remain white */
     }
 
     .collapsible-content {
@@ -124,10 +131,10 @@
         margin: 5px auto;
         transition: all 0.3s ease;
     }
+
     footer {
         margin-top: -100%;
     }
-
 </style>
 <body>
     <div class="sidebar" id="sidebar">
@@ -137,12 +144,12 @@
             <div class="bar"></div>
         </button>
         <div class="logo">
-            <img src="../images/logo.png" alt="">
+            <img src="../images/logo.png" alt="Logo">
         </div>
         <h1 class="title">HAPPY SMILE DENTAL CLINIC</h1>
         
         <div class="menu">
-            <div class="menu-item" onclick="setMenuActive(this)"><a href="../admin/admin_dashboard.php">Dashboard</a></div>
+            <div class="menu-items" onclick="setMenuActive(this)"><a href="../admin/admin_dashboard.php">Dashboard</a></div>
             <div class="menu-item collapsible" onclick="toggleCollapse('clients', this); setMenuActive(this);">
                 About Clients
                 <span class="arrow down material-icons">keyboard_arrow_down</span>
@@ -163,11 +170,31 @@
                 <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_unattended_appointment.php">Unattended Appointments</a></div>
                 <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_appointments_history.php">Appointments History</a></div>
             </div>
-            <div class="menu-item" onclick="setMenuActive(this)"><a href="../admin/admin_profile.php">Profile</a></div>
+            <div class="menu-items" onclick="setMenuActive(this)"><a href="../admin/admin_profile.php">Profile</a></div>
         </div>
     </div>
 
     <script>
+    // Function to handle setting the active state for main menu items
+    function setMenuActive(element) {
+        // Remove active class from all menu items
+        const allMenuItems = document.querySelectorAll('.menu-items');
+        allMenuItems.forEach(item => item.classList.remove('active'));
+
+        // Add active class to the clicked menu item
+        element.classList.add('active');
+    }
+
+    // Function to handle setting the active state for sub-menu items
+    function setActive(element) {
+        // Remove active class from all sub-menu items
+        const allSubMenuItems = document.querySelectorAll('.sub-menu-item');
+        allSubMenuItems.forEach(item => item.classList.remove('active'));
+
+        // Add active class to the clicked sub-menu item
+        element.classList.add('active');
+    }
+
     // Function to toggle the collapsible content and save its state
     function toggleCollapse(id, element) {
         const content = document.getElementById(id);
@@ -179,13 +206,11 @@
             arrowDown.style.display = "inline"; // Show down arrow
             arrowUp.style.display = "none"; // Hide up arrow
             localStorage.setItem(id, "closed"); // Save state as closed
-            element.classList.remove("active"); // Remove active class
         } else {
             content.style.display = "block";
             arrowDown.style.display = "none"; // Hide down arrow
             arrowUp.style.display = "inline"; // Show up arrow
             localStorage.setItem(id, "open"); // Save state as open
-            element.classList.add("active"); // Add active class
         }
     }
 
@@ -204,27 +229,9 @@
                 content.style.display = "block"; // Open section
                 arrowDown.style.display = "none"; // Hide down arrow
                 arrowUp.style.display = "inline"; // Show up arrow
-                section.classList.add("active"); // Keep hover style
+                section.classList.add("active"); // Keep active style
             }
         });
-    }
-
-    // Function to set the active state for sub-menu items
-    function setActive(element) {
-        const allSubMenuItems = document.querySelectorAll('.sub-menu-item');
-        allSubMenuItems.forEach(item => item.classList.remove('active')); // Remove active class from all
-        element.classList.add('active'); // Add active class to the clicked item
-
-        const parentMenuItem = element.closest('.collapsible-content').previousElementSibling;
-        if (parentMenuItem) {
-            parentMenuItem.classList.add('active'); // Add active class to parent menu item
-        }
-    }
-
-    function setMenuActive(element) {
-        const allMenuItems = document.querySelectorAll('.menu-item');
-        allMenuItems.forEach(item => item.classList.remove('active')); // Remove active class from all
-        element.classList.add('active'); // Add active class to the clicked item
     }
 
     // Function to toggle the sidebar
@@ -235,7 +242,8 @@
 
     // Initialize the collapsible states when the page loads
     document.addEventListener("DOMContentLoaded", initializeCollapsibleState);
-    </script>
+</script>
+
 
 </body>
 </html>
