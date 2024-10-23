@@ -132,9 +132,34 @@
         transition: all 0.3s ease;
     }
 
-    footer {
-        margin-top: -100%;
+    /**centering content */
+    .content {
+        height: auto;
+        margin-top: 0px; 
+        margin-left: 250px;
+        transition: margin-left 0.3s ease;
+        
     }
+    .content.sidebar-open {
+        margin-left: 250px;
+    }
+
+    .content.sidebar-closed {
+        width: 100%;
+        margin-left: 1px; 
+    }
+
+    .sub-nav{
+        display:flex;
+    }
+    .sub-nav p{
+        margin-left: 5px;
+    }
+    .sub-nav .highlighted {
+        color: #008B7B;
+
+    }
+
 </style>
 <body>
     <div class="sidebar" id="sidebar">
@@ -237,7 +262,17 @@
     // Function to toggle the sidebar
     function toggleSidebar() {
         const sidebar = document.getElementById('sidebar');
+        const content = document.querySelector('.content'); // Select the content area
         sidebar.classList.toggle('hidden'); // Toggle the 'hidden' class
+        
+        // Add or remove classes based on the sidebar's visibility
+        if (sidebar.classList.contains('hidden')) {
+            content.classList.remove('sidebar-open'); // Remove the open class
+            content.classList.add('sidebar-closed'); // Add the closed class
+        } else {
+            content.classList.remove('sidebar-closed'); // Remove the closed class
+            content.classList.add('sidebar-open'); // Add the open class
+        }
     }
 
     // Initialize the collapsible states when the page loads

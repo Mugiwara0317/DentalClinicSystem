@@ -11,34 +11,6 @@
         background: #F4F4F4;
     }
 
-    /**centering content */
-    .content {
-        height: 1000px;
-        margin-top: 0px; 
-        margin-left: 250px;
-        transition: margin-left 0.3s ease;
-        
-    }
-    .content.sidebar-open {
-        margin-left: 250px;
-    }
-
-    .content.sidebar-closed {
-        width: 100%;
-        margin-left: 1px; 
-    }
-
-    .sub-nav{
-        display:flex;
-    }
-    .sub-nav p{
-        margin-left: 5px;
-    }
-    .sub-nav .highlighted {
-        color: #008B7B;
-
-    }
-
     .cards{
         width: 100%;
         display: flex;
@@ -182,7 +154,6 @@
 ?>
 
 <div class="content">
-        
     
     <div class="sub-nav">
         <p class="highlighted">Dashboard | </p>
@@ -229,70 +200,70 @@
     
     <form action="">
         <div class="table-container">
-        <h1 class="services">Services</h1>
-        <input type="button" class="btn" value="Add Services">
-        <table id="myTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Patient Name</th>
-                    <th>Service</th>
-                    <th>Start Date/Time</th>
-                    <th>End Date/Time</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <tr>
-                    <td>1</td>
-                    <td>John Light Smith</td>
-                    <td>Bunot</td>
-                    <td>dd/mm/yyyy 1:30pm</td>
-                    <td>dd/mm/yyyy 2:30pm</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>John LightSmith</td>
-                    <td>Braces</td>
-                    <td>dd/mm/yyyy 10:30am</td>
-                    <td>dd/mm/yyyy 3:30pm</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>John Light Smith</td>
-                    <td>Tooth Cleaning</td>
-                    <td>dd/mm/yyyy 9:30am</td>
-                    <td>dd/mm/yyyy 10:30am</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John Light Smith</td>
-                    <td>Bunot</td>
-                    <td>dd/mm/yyyy 1:30pm</td>
-                    <td>dd/mm/yyyy 2:30pm</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>John LightSmith</td>
-                    <td>Braces</td>
-                    <td>dd/mm/yyyy 10:30am</td>
-                    <td>dd/mm/yyyy 3:30pm</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>John Light Smith</td>
-                    <td>Tooth Cleaning</td>
-                    <td>dd/mm/yyyy 9:30am</td>
-                    <td>dd/mm/yyyy 10:30am</td>
-                    <td><button class="reschedule-btn">Re-Schedule</button></td>
-                </tr>
-            </tbody>
-        </table>
+            <h1 class="services">Services</h1>
+            <input type="button" class="btn" value="Add Services">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient Name</th>
+                        <th>Service</th>
+                        <th>Start Date/Time</th>
+                        <th>End Date/Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>John Light Smith</td>
+                        <td>Bunot</td>
+                        <td>dd/mm/yyyy 1:30pm</td>
+                        <td>dd/mm/yyyy 2:30pm</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John LightSmith</td>
+                        <td>Braces</td>
+                        <td>dd/mm/yyyy 10:30am</td>
+                        <td>dd/mm/yyyy 3:30pm</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>John Light Smith</td>
+                        <td>Tooth Cleaning</td>
+                        <td>dd/mm/yyyy 9:30am</td>
+                        <td>dd/mm/yyyy 10:30am</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>John Light Smith</td>
+                        <td>Bunot</td>
+                        <td>dd/mm/yyyy 1:30pm</td>
+                        <td>dd/mm/yyyy 2:30pm</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John LightSmith</td>
+                        <td>Braces</td>
+                        <td>dd/mm/yyyy 10:30am</td>
+                        <td>dd/mm/yyyy 3:30pm</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>John Light Smith</td>
+                        <td>Tooth Cleaning</td>
+                        <td>dd/mm/yyyy 9:30am</td>
+                        <td>dd/mm/yyyy 10:30am</td>
+                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                    </tr>
+                </tbody>
+            </table>
     </form>
     
 </div>
@@ -319,21 +290,6 @@
             dom: 'lfrtip' // Remove buttons, keep pagination, search, and table layout
         });
     });
-
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        const content = document.querySelector('.content'); // Select the content area
-        sidebar.classList.toggle('hidden'); // Toggle the 'hidden' class
-        
-        // Add or remove classes based on the sidebar's visibility
-        if (sidebar.classList.contains('hidden')) {
-            content.classList.remove('sidebar-open'); // Remove the open class
-            content.classList.add('sidebar-closed'); // Add the closed class
-        } else {
-            content.classList.remove('sidebar-closed'); // Remove the closed class
-            content.classList.add('sidebar-open'); // Add the open class
-        }
-    }
 
     const data = {
             labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
