@@ -238,7 +238,7 @@
                     
                     <div id="error-message" class="error-message"></div>
                     
-                    <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                    <a href="reset_password.php" class="forgot-password">Forgot Password?</a>
                     <button type="submit" class="login-btn">Login</button>
                 </form>
                 <div class="register-section"> 
