@@ -156,7 +156,7 @@
                 <span class="arrow up material-icons" style="display: none;">keyboard_arrow_up</span>
             </div>
             <div class="collapsible-content" id="clients">
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_clients.php">All Clients</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_clients.php">Registered Clients</a></div>
                 <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_archieved_clients.php">Archived Clients</a></div>
             </div>
             <div class="menu-item collapsible" onclick="toggleCollapse('appointments', this); setMenuActive(this);">
