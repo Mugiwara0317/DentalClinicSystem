@@ -59,6 +59,7 @@
     .logo-circle, img {
         width: 40px;
         height: 40px;
+        background-color: transparent;
         border-radius: 50%;
         margin-right: 10px;
     }
@@ -67,6 +68,7 @@
         color: white;
         font-size: 18px;
         font-weight: bold;
+        font-style: Inter;
     }
 
     .nav-center {
@@ -184,8 +186,8 @@
 <body>
     <header class="header">
         <div class="logo">
-            <div class="">
-                <img src="../images/logo.png" alt="Clinic Logo">
+            <div class="logo-circle">
+                <img src="../images/logo.png" alt="">
             </div>
             <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
         </div>

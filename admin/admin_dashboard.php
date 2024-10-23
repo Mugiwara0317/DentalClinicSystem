@@ -6,6 +6,9 @@
     <title>Dashboard</title>
 </head>
 <body>
-<?php include "../navigators/admin_sidebar.php"?>
+<?php 
+    include "../navigators/admin_sidebar.php";
+    include "../navigators/admin_header.php";
+?>
 </body>
 </html>
