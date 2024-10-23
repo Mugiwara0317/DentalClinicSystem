@@ -36,10 +36,12 @@
         margin-top: -20px;
     }
 
-    h1 {
+    .title {
+        border: 0 0 1px 0 solid black;
         text-align: center;
-        font-size: 1em;
+        font-size: 14px;
         color: #008B7B;
+        font-weight: bold;
     }
 
     .dashboard {
@@ -137,18 +139,18 @@
         <div class="logo">
             <img src="../images/logo.png" alt="">
         </div>
-        <h1>HAPPY SMILE DENTAL CLINIC</h1>
+        <h1 class="title">HAPPY SMILE DENTAL CLINIC</h1>
         
         <div class="menu">
-            <div class="menu-item" onclick="setMenuActive(this)"><a href="#">Dashboard</a></div>
+            <div class="menu-item" onclick="setMenuActive(this)"><a href="../admin/admin_dashboard.php">Dashboard</a></div>
             <div class="menu-item collapsible" onclick="toggleCollapse('clients', this); setMenuActive(this);">
                 About Clients
                 <span class="arrow down material-icons">keyboard_arrow_down</span>
                 <span class="arrow up material-icons" style="display: none;">keyboard_arrow_up</span>
             </div>
             <div class="collapsible-content" id="clients">
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">All Clients</a></div>
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">Archived Clients</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_clients.php">All Clients</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_archieved_clients.php">Archived Clients</a></div>
             </div>
             <div class="menu-item collapsible" onclick="toggleCollapse('appointments', this); setMenuActive(this);">
                 About Appointments
@@ -156,12 +158,12 @@
                 <span class="arrow up material-icons" style="display: none;">keyboard_arrow_up</span>
             </div>
             <div class="collapsible-content" id="appointments">
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">Appointments Schedule</a></div>
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">Today Appointments</a></div>
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">Unattended Appointments</a></div>
-                <div class="sub-menu-item" onclick="setActive(this)"><a href="#">Appointments History</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_appointment_schedule.php">Appointments Schedule</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_today_appointment.php">Today Appointments</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_unattended_appointment.php">Unattended Appointments</a></div>
+                <div class="sub-menu-item" onclick="setActive(this)"><a href="../admin/admin_appointments_history.php">Appointments History</a></div>
             </div>
-            <div class="menu-item" onclick="setMenuActive(this)"><a href="#">Profile</a></div>
+            <div class="menu-item" onclick="setMenuActive(this)"><a href="../admin/admin_profile.php">Profile</a></div>
         </div>
     </div>
 
@@ -213,14 +215,16 @@
         allSubMenuItems.forEach(item => item.classList.remove('active')); // Remove active class from all
         element.classList.add('active'); // Add active class to the clicked item
 
-        const allMenuItems = document.querySelectorAll('.menu-item');
-        allMenuItems.forEach(item => item.classList.remove('active')); // Remove active class from all
-        element.classList.add('active');
-
         const parentMenuItem = element.closest('.collapsible-content').previousElementSibling;
         if (parentMenuItem) {
             parentMenuItem.classList.add('active'); // Add active class to parent menu item
         }
+    }
+
+    function setMenuActive(element) {
+        const allMenuItems = document.querySelectorAll('.menu-item');
+        allMenuItems.forEach(item => item.classList.remove('active')); // Remove active class from all
+        element.classList.add('active'); // Add active class to the clicked item
     }
 
     // Function to toggle the sidebar
