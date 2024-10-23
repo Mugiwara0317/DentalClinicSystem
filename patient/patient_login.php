@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Smile Dental Clinic - Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
 </head>
 <style>
     * {
@@ -30,14 +29,14 @@
         background-color: #333;
         padding: 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end; /* Align all items to the right */
         align-items: center;
-        position: relative;
     }
 
     .logo {
         display: flex;
         align-items: center;
+        margin-right: auto; /* Push logo to the left */
     }
 
     .logo-circle, img {
@@ -54,17 +53,10 @@
     }
 
     .nav-center {
-        position: absolute;
-        left: 80%;
-    }
-
-    .login-text {
-        color: #008080;
-        font-size: 16px;
-        font-weight: normal;
-        position: absolute;
-        right: -150px;
-        top: -10px;
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Add space between navigation items */
+        margin-right: 20px; /* Add some margin to the right */
     }
 
     .nav-links {
@@ -73,12 +65,33 @@
     }
 
     .public-home-btn {
-        background-color: #008080;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
+        color: white; /* Change text color to white for visibility */
+        text-decoration: none; /* Remove underline */
         font-size: 16px;
-        text-decoration: none;
+    }
+
+    .public-home-btn:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+    .book-now-btn {
+        background-color: #008B7B; /* Background color for Book Now */
+        color: white; /* Text color */
+        padding: 10px 15px; /* Add padding for better appearance */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition for hover */
+    }
+
+    .book-now-btn:hover {
+        background-color:  #008080;
+        ; /* Darker shade on hover */
+        text-decoration: none; /* Maintain no underline on hover */
+    }
+
+    .login-text {
+        color: #008080;
+        font-size: 16px;
+        font-weight: normal;
     }
 
     .login-container {
@@ -92,7 +105,7 @@
     .login-card {
         display: flex;
         background-color: white;
-        width: 800px;
+        width: 1000px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
     }
@@ -164,6 +177,34 @@
         margin-top: 10px;
     }
 
+    .forgot-password {
+        display: block; 
+        text-align: right; 
+        color: #0A58CA; 
+        text-decoration: none; 
+    }
+
+    .forgot-password:hover {
+        color: #004a99; 
+    }
+
+    .register-text {
+        color: #0A58CA; 
+        text-decoration: none; 
+    }
+
+    .register-text:hover {
+        color: #004a99; 
+    }
+
+    .register-section {
+        text-align: center; 
+        margin-top: 20px; 
+    }
+
+    .admin-area-title {
+        font-weight: bold; 
+    }
 </style>
 <body>
     <header class="header">
@@ -172,17 +213,13 @@
                 <img src="../images/logo.png" alt="Clinic Logo">
             </div>
             <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
-        
-        <nav class="nav-links">
+        </div>
+        <nav class="nav-center">
             <a href="#" class="public-home-btn">Home</a>
             <a href="#" class="public-home-btn">Contact</a>
-            <a href="#" class="public-home-btn">Book Now</a>
-        </nav>
-
-        </div>
-        <div class="nav-center">
             <span class="login-text">Login</span>
-        </div>
+            <a href="#" class="book-now-btn">Book Now</a>
+        </nav>
     </header>
     
     <div class="login-container">
@@ -200,8 +237,13 @@
                     <input type="password" id="password" name="password" placeholder="Password" required aria-label="Password">
                     
                     <div id="error-message" class="error-message"></div>
+                    
+                    <a href="reset_password.php" class="forgot-password">Forgot Password?</a>
                     <button type="submit" class="login-btn">Login</button>
                 </form>
+                <div class="register-section"> 
+                    <p>Not yet Registered? <a href="register.html" class="register-text">Register here</a></p>
+                </div>
             </div>
         </div>
     </div>
