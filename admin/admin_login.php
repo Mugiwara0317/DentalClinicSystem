@@ -42,7 +42,7 @@
     .logo-circle, img {
         width: 40px;
         height: 40px;
-        background-color: #ccc;
+        background-color: transparent;
         border-radius: 50%;
         margin-right: 10px;
     }
@@ -51,6 +51,7 @@
         color: white;
         font-size: 18px;
         font-weight: bold;
+        font-style: Inter;
     }
 
     /* Centered Login Text */
@@ -161,7 +162,7 @@
     <header class="header">
         <div class="logo">
             <div class="logo-circle">
-                <img src="../images/logo.jpg" alt="">
+                <img src="../images/logo.png" alt="">
             </div>
             <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
         </div>
