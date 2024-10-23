@@ -13,23 +13,28 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'inter', sans-serif;
             background-color: #f5f5f5;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding-top: 80px;
         }
 
         .header {
-            position: fixed; /* Fixed position to keep it at the top */
-            top: 0; /* Align to the top of the page */
+            position: fixed;
+            top: 0;
             left: 0;
             right: 0;
             background-color: #333;
-            height: 80px; /* Set a fixed height */
+            height: 80px;
             padding: 20px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            z-index: 1000; /* Ensure it stays above other elements */
+            z-index: 1000;
         }
 
         .logo {
@@ -84,87 +89,87 @@
         }
 
         .book-now-btn:hover {
-            background-color: transparent; /* No hover color */
-        }
-
-        .register-title-container {
-            width: 1108px; /* Fixed width */
-            height: 104px; /* Fixed height */
-            padding: 18px 0; /* Top and bottom padding */
-            margin-bottom: 20px; /* Space below the title */
-            display: flex; /* Flex container for centering */
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-            background-color: #fff; /* Optional: Background color */
-        }
-
-        .register-title {
-            font-weight: bold; /* Make the title bold */
-            color: #008B7B; /* Title color */
-            font-size: 24px; /* Font size for the title */
-            text-align: center; /* Center the text */
-            margin: 0; /* Remove default margin */
+            background-color: transparent;
         }
 
         .registration-form {
-            width: 1108px; /* Fixed width */
-            height: auto; /* Auto height */
-            border-radius: 4px; /* Rounded corners */
-            box-shadow: 0px 4px 15px 0px #2C3F5859; /* Shadow for elevation */
-            background-color: white; /* Background color */
-            padding: 20px; /* Padding for inner spacing */
-            margin-top: 100px; /* Adjusted margin to prevent overlap */
-            position: relative; /* Relative to position below fixed header */
-            z-index: 1; /* Ensure it appears below the header */
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 800px;
+            max-height: 600vh;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
         }
 
-        .form-group {
-            width: 100%; /* Make the group take full width */
-            margin-bottom: 20px; /* Space between fields */
-            text-align: left; /* Align text to the left */
+        .register-title-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .register-title {
+            font-weight: bold;
+            color: #008B7B;
+            font-size: 24px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
         }
 
         .form-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 1px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 1px;
         }
 
         label {
-            font-size: 14px;
-            margin-bottom: 5px;
-            display: block; /* Make the label a block element */
+            font-size: 12px;
+            margin-bottom: 3px;
+            display: block;
         }
 
         input {
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 20px;
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            margin-bottom: 1px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: calc(50% - 10px); /* Half width minus margin */
         }
 
         .line {
             width: 100%;
-            height: 1px;
-            background-color: #ccc; /* Line color */
-            margin: 20px 0; /* Space around the line */
+            height: 2px;
+            background-color: black;
+            margin: 10px 0;
         }
 
-        .reset-btn {
-            background-color: #0D6EFD;
+        .submit-btn {
+            background-color: #198754;
             color: white;
-            padding: 10px;
+            padding: 5px;
             font-size: 16px;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 250px;
+            width: 50%;
+            margin: 0 auto;
         }
 
-        .reset-btn:hover {
+        .submit-btn:hover {
             background-color: #0056b3;
         }
 
@@ -187,9 +192,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <div class="">
-                <img src="../images/logo.png" alt="Clinic Logo">
-            </div>
+            <img src="../images/logo.png" alt="Clinic Logo">
             <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
         </div>
         <nav class="nav-center">
@@ -200,83 +203,81 @@
         </nav>
     </header>
     
-    <div class="login-container">
-        <div class="registration-form">
-            <div class="register-title-container">
-                <h2 class="register-title">REGISTER</h2>
-            </div>
-            <form action="process_registration.php" method="post">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="middle-name">Middle Name</label>
-                        <input type="text" id="middle-name" name="middle-name">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="suffix">Suffix</label>
-                        <input type="text" id="suffix" name="suffix">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" id="age" name="age" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <input type="text" id="gender" name="gender" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="occupation">Occupation</label>
-                        <input type="text" id="occupation" name="occupation" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="civil-status">Civil Status</label>
-                        <input type="text" id="civil-status" name="civil-status" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cellphone">Cellphone #</label>
-                        <input type="text" id="cellphone" name="cellphone" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-                <div class="line"></div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Create Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <button type="submit" class="reset-btn">Submit</button>
-                <p class="info-text">Already have an account? <a href="#" class="contact-us">Login</a></p>
-            </form>
+    <div class="registration-form">
+        <div class="register-title-container">
+            <h2 class="register-title">REGISTER</h2>
         </div>
+        <form action="process_registration.php" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name">Middle Name</label>
+                    <input type="text" id="middle-name" name="middle-name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="suffix">Suffix</label>
+                    <input type="text" id="suffix" name="suffix">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input type="text" id="gender" name="gender" required>
+                </div>
+                <div class="form-group">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="civil-status">Civil Status</label>
+                    <input type="text" id="civil-status" name="civil-status" required>
+                </div>
+                <div class="form-group">
+                    <label for="cellphone">Cellphone #</label>
+                    <input type="tel" id="cellphone" name="cellphone" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="line"></div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <p class="info-text">Already have an account? <a href="#" class="contact-us">Login</a></p>
+        </form>
     </div>
 </body>
 </html>
