@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Smile Dental Clinic - Admin Area</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        // JavaScript function to handle form submission
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Dummy validation: Replace this with your actual login logic
+            if (email !== "admin@gmail.com" || password !== "admin123") {
+                document.getElementById('error-message').innerText = "Incorrect email or password. Please try again.";
+            } else {
+                // Redirect to the admin dashboard if the credentials are correct
+                window.location.href = "admin_dashboard.php";
+            }
+        }
+    </script>
 </head>
 <style>
     * {
@@ -42,7 +59,6 @@
     .logo-circle, img {
         width: 40px;
         height: 40px;
-        background-color: #ccc;
         border-radius: 50%;
         margin-right: 10px;
     }
@@ -53,7 +69,6 @@
         font-weight: bold;
     }
 
-    /* Centered Login Text */
     .nav-center {
         position: absolute;
         left: 80%;
@@ -63,6 +78,9 @@
         color: #008080;
         font-size: 16px;
         font-weight: normal;
+        position: absolute;
+        right: -150px;
+        top: -10px;
     }
 
     .nav-links {
@@ -96,22 +114,22 @@
     }
 
     .image-placeholder {
-        background-color: #ccc;
+        position: relative;
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px;
+        overflow: hidden;
     }
 
     .image-placeholder img {
-        width: 80px;
-        height: 80px;
-        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
 
     .login-form {
-        padding: 40px;
+        padding: 80px;
         width: 50%;
     }
 
@@ -156,12 +174,18 @@
         background-color: #0056b3;
     }
 
+    .error-message {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+
 </style>
 <body>
     <header class="header">
         <div class="logo">
-            <div class="logo-circle">
-                <img src="../images/logo.jpg" alt="">
+            <div class="">
+                <img src="../images/logo.png" alt="Clinic Logo">
             </div>
             <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
         </div>
@@ -176,17 +200,18 @@
     <div class="login-container">
         <div class="login-card">
             <div class="image-placeholder">
-                <img src="placeholder.png" alt="Image placeholder">
+                <img src="../images/1.jpg" alt="Login Background">
             </div>
             <div class="login-form">
                 <h2 class="admin-area-title">ADMIN AREA</h2>
-                <form action="admin_dashboard.php">
+                <form onsubmit="validateLogin(event)">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required aria-label="Email">
                     
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required aria-label="Password">
                     
+                    <div id="error-message" class="error-message"></div>
                     <button type="submit" class="login-btn">Login</button>
                 </form>
             </div>
