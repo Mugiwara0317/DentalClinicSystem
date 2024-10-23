@@ -3,41 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Smile Dental Clinic - Login</title>
+    <title>HAPPY SMILE DENTAL CLINIC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center bg-light p-3">
-        <div class="header-left d-flex align-items-center">
-            <img src="logo.png" alt="Happy Smile Dental Clinic Logo" height="50" class="mr-2">
-            <span class="font-weight-bold">HAPPY SMILE DENTAL CLINIC</span>
+    <header class="site-header d-flex justify-content-between align-items-center p-3 bg-dark text-white">
+        <div class="d-flex align-items-center">
+            <img src="path/to/your/logo.png"  class="logo" />
+            <h1 class="clinic-name mb-0 ml-3">HAPPY SMILE DENTAL CLINIC</h1> <!-- Clinic name beside the logo -->
         </div>
-        <div class="header-right">
-            <a href="index.html" class="btn btn-link">Home</a>
-            <a href="contact.html" class="btn btn-link">Contact</a>
-            <a href="login.html" class="btn btn-link">Login</a>
-            <a href="book.html" class="btn btn-link">Book Now</a>
-        </div>
+        <nav class="nav-links">
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Book Now</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form action="login.php" method="POST" class="border p-4 rounded bg-white">
-                    <h2 class="text-center">Login</h2>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    <a href="#" class="d-block text-right">Forgot Password?</a>
-                </form>
-                <p class="text-center mt-3">Not yet registered? <a href="register.html">Register here</a></p>
-            </div>
-        </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

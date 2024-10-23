@@ -1,100 +1,19 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove default margin */
+    font-family: 'Inter', sans-serif; /* Set font to Inter */
 }
 
-/* Header Styles */
-header {
-    background-color: #ffffff; /* White background for header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+.site-header {
+    height: 102.49px;          /* Set height */
 }
 
-/* Logo Styles */
-.header-left img {
-    width: 50px; /* Adjust logo size */
+.logo {
+    font-size: 36px;          /* Logo font size */
 }
 
-.header-left span {
-    font-size: 1.5rem; /* Logo text size */
-}
-
-/* Navigation Links */
-.header-right a {
-    color: #007bff; /* Bootstrap primary color */
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: 500;
-}
-
-.header-right a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Form Styles */
-form {
-    background-color: #ffffff; /* White background for form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for form */
-}
-
-/* Input Styles */
-input[type="email"],
-input[type="password"] {
-    border: 1px solid #ced4da; /* Light gray border */
-    border-radius: 5px; /* Rounded corners for input */
-}
-
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-/* Button Styles */
-button {
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* White text */
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Links */
-a {
-    color: #007bff; /* Bootstrap primary color */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Footer Styles */
-footer {
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .header-left img {
-        width: 40px; /* Smaller logo on mobile */
-    }
-
-    .header-left span {
-        font-size: 1.2rem; /* Smaller text on mobile */
-    }
-
-    header {
-        flex-direction: column; /* Stack header items on mobile */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .header-right {
-        margin-top: 10px; /* Space between header items */
-    }
+.clinic-name {
+    color: #ffffff;           
+    font-size: 12px;          
+    margin-left: 15px;        
+    margin-top: 10px;         
 }
