@@ -19,7 +19,7 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     footer {
-        margin-top:126px !important;
+        margin-top:86px !important;
     }
 
     table {
@@ -89,7 +89,13 @@
 ?>
 
 <div class="content">
-<div class="table-container">
+    <div class="sub-nav">
+        <p>Dashboard | </p>
+        <p class="highlighted">About Clients | </p>
+        <p>About Appointments | </p>
+        <p>Profile</p>
+    </div>
+    <div class="table-container">
         <table id="myTable">
             <thead>
                 <tr>
@@ -234,6 +240,7 @@
                     });
                 });
             </script>
+            </div>
 </div>
 
 <?php 

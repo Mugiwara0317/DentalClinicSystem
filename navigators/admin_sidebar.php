@@ -134,6 +134,7 @@
 
     /**centering content */
     .content {
+        flex: 1;
         height: auto;
         margin-top: 0px; 
         margin-left: 250px;
@@ -158,6 +159,17 @@
     .sub-nav .highlighted {
         color: #008B7B;
 
+    }
+
+    .dataTables_wrapper .dataTables_filter input{
+        margin-bottom: 8px;
+    }
+
+    .tableTitle {
+        text-align: left;
+        color: #008B7B;
+        font-size: 22px;
+        font-weight: bold;
     }
 
 </style>

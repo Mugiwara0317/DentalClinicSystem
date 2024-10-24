@@ -84,13 +84,6 @@
         }
     }
 
-    .services {
-        text-align: left;
-        color: #008B7B;
-        font-size: 22px;
-        font-weight: bold;
-    }
-
     .table-container {
         width: 97%;
         margin: 20px;
@@ -140,11 +133,19 @@
         background-color: #0056b3;
     }
 
-    .btn {
+    .add-btn {
         background: #0D6EFD;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
         color: white;
         float: right;
         margin: 20px;
+    }
+
+    .add-btn:hover{
+        background: #0056b3;
+        color: white;
     }
 </style>
 <body>
@@ -198,75 +199,184 @@
 
     
     
-    <form action="">
         <div class="table-container">
-            <h1 class="services">Services</h1>
-            <input type="button" class="btn" value="Add Services">
+            <h1 class="tableTitle">Services</h1>
+            <input type="button" class="add-btn" value="Add Services" data-bs-toggle="modal" data-bs-target="#addServiceModal">
             <table id="myTable">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Patient Name</th>
-                        <th>Service</th>
-                        <th>Start Date/Time</th>
-                        <th>End Date/Time</th>
+                        <th>Service Name</th>
+                        <th>Service Price</th>
+                        <th>Duration</th>
+                        <th>Availability</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
                     <tr>
                         <td>1</td>
-                        <td>John Light Smith</td>
-                        <td>Bunot</td>
-                        <td>dd/mm/yyyy 1:30pm</td>
-                        <td>dd/mm/yyyy 2:30pm</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>Teeth Whitening</td>
+                        <td>&#8369 6,500</td>
+                        <td>30minute/s</td>
+                        <td>Active</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>John LightSmith</td>
                         <td>Braces</td>
-                        <td>dd/mm/yyyy 10:30am</td>
-                        <td>dd/mm/yyyy 3:30pm</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>&#8369 6,500</td>
+                        <td>30minute/s</td>
+                        <td>Active</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>John Light Smith</td>
                         <td>Tooth Cleaning</td>
-                        <td>dd/mm/yyyy 9:30am</td>
-                        <td>dd/mm/yyyy 10:30am</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>&#8369 6,500</td>
+                        <td>30minute/s</td>
+                        <td>Inactive</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>John Light Smith</td>
+                        <td>4</td>
                         <td>Bunot</td>
-                        <td>dd/mm/yyyy 1:30pm</td>
-                        <td>dd/mm/yyyy 2:30pm</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>&#8369 6,500</td>
+                        <td>30minute/s</td>
+                        <td>Active</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>John LightSmith</td>
-                        <td>Braces</td>
-                        <td>dd/mm/yyyy 10:30am</td>
-                        <td>dd/mm/yyyy 3:30pm</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>5</td>
+                        <td>Putol Ulo</td>
+                        <td>&#8369 libre</td>
+                        <td>1minute/s</td>
+                        <td>Active</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>John Light Smith</td>
-                        <td>Tooth Cleaning</td>
-                        <td>dd/mm/yyyy 9:30am</td>
-                        <td>dd/mm/yyyy 10:30am</td>
-                        <td><button class="reschedule-btn">Re-Schedule</button></td>
+                        <td>6</td>
+                        <td>Mumog</td>
+                        <td>&#8369 sipag lang</td>
+                        <td>300minute/s</td>
+                        <td>Inactive</td>
+                        <td><button class="reschedule-btn" data-bs-toggle="modal" data-bs-target="#updateServiceModal">Update</button></td>
                     </tr>
                 </tbody>
             </table>
-    </form>
     
+    <!-- add services modal -->
+    <div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addServiceModalLabel">Add Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="serviceId" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="serviceId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceName" class="form-label">Service Name</label>
+                        <input type="text" class="form-control" id="serviceName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="servicePrice" class="form-label">Service Price</label>
+                        <div class="input-group">
+                        <span class="input-group-text">&#8369</span>
+                        <input type="text" class="form-control" id="servicePrice">
+                        <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceDuration" class="form-label">Duration</label>
+                        <div class="input-group">
+                        <select class="form-select" id="durationUnit">
+                            <option value="mins">min/s</option>
+                            <option value="hours">hour/s</option>
+                        </select>
+                        <input type="text" class="form-control" id="serviceDuration">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="availability" class="form-label">Availability</label>
+                        <select class="form-select" id="availability">
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    </form>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- update services modal -->
+    <div class="modal fade" id="updateServiceModal" tabindex="-1" aria-labelledby="updateServiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateServiceModalLabel">Update Service</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="serviceId" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="serviceId" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceName" class="form-label">Service Name</label>
+                        <input type="text" class="form-control" id="serviceName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="servicePrice" class="form-label">Service Price</label>
+                        <div class="input-group">
+                        <span class="input-group-text">&#8369</span>
+                        <input type="text" class="form-control" id="servicePrice">
+                        <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceDuration" class="form-label">Duration</label>
+                        <div class="input-group">
+                        <select class="form-select" id="durationUnit">
+                            <option value="mins">min/s</option>
+                            <option value="hours">hour/s</option>
+                        </select>
+                        <input type="text" class="form-control" id="serviceDuration">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="availability" class="form-label">Availability</label>
+                        <select class="form-select" id="availability">
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    </form>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Update Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 <!-- DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 

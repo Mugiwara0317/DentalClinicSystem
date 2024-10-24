@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>All Clients</title>
+    <title>Registered Clients</title>
 </head>
 <style>
     body{
@@ -204,66 +204,66 @@
     <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="moreInfoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="moreInfoModalLabel">More Info</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                <div class="mb-3">
-                    <label for="firstName" class="form-label">First name:</label>
-                    <input type="text" class="form-control" id="firstName" value="John" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="moreInfoModalLabel">More Info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="mb-3">
-                    <label for="middleName" class="form-label">Middle Name:</label>
-                    <input type="text" class="form-control" id="middleName" value="Light" >
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First name:</label>
+                        <input type="text" class="form-control" id="firstName" value="John" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="middleName" class="form-label">Middle Name:</label>
+                        <input type="text" class="form-control" id="middleName" value="Light" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" value="Smith" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="suffix" class="form-label">Suffix:</label>
+                        <input type="text" class="form-control" id="suffix" value="Suffix (Optional)" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth:</label>
+                        <input type="text" class="form-control" id="dob" value="dd/mm/yyyy" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age:</label>
+                        <input type="text" class="form-control" id="age" value="23" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender:</label>
+                        <input type="text" class="form-control" id="gender" value="Male" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="occupation" class="form-label">Occupation:</label>
+                        <input type="text" class="form-control" id="occupation" value="IT Professional" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Civil Status:</label>
+                        <input type="text" class="form-control" id="status" value="Married" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="cellphone" class="form-label">Cellphone #:</label>
+                        <input type="text" class="form-control" id="cellphone" value="12345687" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address:</label>
+                        <input type="text" class="form-control" id="address" value="Cavite" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="email" value="JohnSmithGmail.com" >
+                    </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name:</label>
-                    <input type="text" class="form-control" id="lastName" value="Smith" >
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
                 </div>
-                <div class="mb-3">
-                    <label for="suffix" class="form-label">Suffix:</label>
-                    <input type="text" class="form-control" id="suffix" value="Suffix (Optional)" >
-                </div>
-                <div class="mb-3">
-                    <label for="dob" class="form-label">Date of Birth:</label>
-                    <input type="text" class="form-control" id="dob" value="dd/mm/yyyy" >
-                </div>
-                <div class="mb-3">
-                    <label for="age" class="form-label">Age:</label>
-                    <input type="text" class="form-control" id="age" value="23" >
-                </div>
-                <div class="mb-3">
-                    <label for="gender" class="form-label">Gender:</label>
-                    <input type="text" class="form-control" id="gender" value="Male" >
-                </div>
-                <div class="mb-3">
-                    <label for="occupation" class="form-label">Occupation:</label>
-                    <input type="text" class="form-control" id="occupation" value="IT Professional" >
-                </div>
-                <div class="mb-3">
-                    <label for="status" class="form-label">Civil Status:</label>
-                    <input type="text" class="form-control" id="status" value="Married" >
-                </div>
-                <div class="mb-3">
-                    <label for="cellphone" class="form-label">Cellphone #:</label>
-                    <input type="text" class="form-control" id="cellphone" value="12345687" >
-                </div>
-                <div class="mb-3">
-                    <label for="address" class="form-label">Address:</label>
-                    <input type="text" class="form-control" id="address" value="Cavite" >
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email Address:</label>
-                    <input type="email" class="form-control" id="email" value="JohnSmithGmail.com" >
-                </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Update</button>
-            </div>
             </div>
         </div>
     </div>
@@ -280,9 +280,6 @@
 
 <!-- DataTables JS -->
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-
-<!-- for Chart -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
     $(document).ready(function() {
