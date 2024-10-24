@@ -286,19 +286,19 @@
                     <div class="mb-3">
                         <label for="servicePrice" class="form-label">Service Price</label>
                         <div class="input-group">
-                        <span class="input-group-text">&#8369</span>
-                        <input type="text" class="form-control" id="servicePrice">
-                        <span class="input-group-text">.00</span>
+                            <span class="input-group-text">&#8369</span>
+                            <input type="text" class="form-control" id="servicePrice">
+                            <span class="input-group-text">.00</span>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="serviceDuration" class="form-label">Duration</label>
                         <div class="input-group">
-                        <select class="form-select" id="durationUnit">
-                            <option value="mins">min/s</option>
-                            <option value="hours">hour/s</option>
-                        </select>
-                        <input type="text" class="form-control" id="serviceDuration">
+                            <select class="form-select" id="durationUnit">
+                                <option value="mins">min/s</option>
+                                <option value="hours">hour/s</option>
+                            </select>
+                            <input type="text" class="form-control" id="serviceDuration">
                         </div>
                     </div>
                     <div class="mb-3">
@@ -339,19 +339,19 @@
                     <div class="mb-3">
                         <label for="servicePrice" class="form-label">Service Price</label>
                         <div class="input-group">
-                        <span class="input-group-text">&#8369</span>
-                        <input type="text" class="form-control" id="servicePrice">
-                        <span class="input-group-text">.00</span>
+                            <span class="input-group-text">&#8369</span>
+                            <input type="text" class="form-control" id="servicePrice">
+                            <span class="input-group-text">.00</span>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="serviceDuration" class="form-label">Duration</label>
                         <div class="input-group">
-                        <select class="form-select" id="durationUnit">
-                            <option value="mins">min/s</option>
-                            <option value="hours">hour/s</option>
-                        </select>
-                        <input type="text" class="form-control" id="serviceDuration">
+                            <select class="form-select" id="durationUnit">
+                                <option value="mins">min/s</option>
+                                <option value="hours">hour/s</option>
+                            </select>
+                            <input type="text" class="form-control" id="serviceDuration">
                         </div>
                     </div>
                     <div class="mb-3">
