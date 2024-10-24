@@ -27,10 +27,10 @@
 <body>
     <div class="header">
         <div class="header-box">
-            <span class="material-icons">notifications</span>
+            <span class="material-icons" style="background: #008B7B; border-radius: 50%;">notifications</span>
             <span class="material-icons">account_circle</span>
-            <span class="admin">Admin</span>
-            <span class="material-icons">arrow_drop_down</span>
+            <span class="admin" style="color: #FBAF0A;">Admin</span>
+            <span class="material-icons" style="color: #6C757D;">arrow_drop_down</span>
         </div>
     </div>
 </body>
