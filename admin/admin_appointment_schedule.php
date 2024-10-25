@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
@@ -243,49 +244,49 @@
 
     <!-- information modal -->
     <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="informationModalLabel">Information</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="input-group">
-                <input type="text" class="form-control" id="sched" value="" placeholder="Enter Schedule dynamically">
-                <button type="button" class="btn btn-info" id="openSecondModal">
-                    Show
-                </button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="informationModalLabel">Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="input-group">
-                <input type="text" class="form-control" id="sched" value="" placeholder="Enter Schedule dynamically">
-                <button type="button" class="btn btn-info" id="openSecondModal">
-                    Show
-                </button>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="sched" value="" placeholder="Enter Schedule dynamically">
+                    <button type="button" class="btn btn-info" id="openSecondModal">
+                        Show
+                    </button>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="sched" value="" placeholder="Enter Schedule dynamically">
+                    <button type="button" class="btn btn-info" id="openSecondModal">
+                        Show
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
             </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
     </div>
 
     <!-- Second Modal -->
     <div class="modal fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="secondModalLabel">Second Modal</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="secondModalLabel">Second Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Content of the second modal.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
         </div>
-        <div class="modal-body">
-            Content of the second modal.
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
     </div>
 
     <!-- modal for create schedule-->

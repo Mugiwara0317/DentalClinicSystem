@@ -31,18 +31,21 @@
         padding: 20px;
     }
     .card-pic{
-        min-width: 150px;
+        min-width: 100%;
         max-width: 30%;
-        min-height: 300px;
+        max-height: 480px;
         padding-top: 60px;
     }
+    .card-info{
+        min-width: 65%;
+    }
     .card-pic img{
-        min-width: 80%;
-        min-height: 230px;
+        min-width: 90%;
+        min-height: 75%;
     }
     .update{
         background: #008B7B;
-        min-height: 30%;
+        min-height: 10%;
         margin: 20px;
         color: white;
         padding: 10px;
@@ -67,25 +70,56 @@
     form {
         margin: 20px;
     }
+
+    .text-custom {
+        color: #008B7B;
+    }
+    .body {
+        overflow-y: auto;
+    }
 </style>
 <body>
 <?php 
-    include "../navigators/admin_sidebar.php";
-    include "../navigators/admin_header.php";
+    include "../navigators/patient_sidebar.php";
+    include "../navigators/patient_header.php";
 ?>
 
 <div class="content">
     <div class="sub-nav">
         <p>Dashboard | </p>
-        <p>About Clients | </p>
-        <p>About Appointments | </p>
+        <p>Appointments | </p>
         <p class="highlighted">Profile</p>
     </div>
     <div class="d-flex">
-        <div class="card card-pic">
-            <img src="../images/default_profile_pic.png" alt="">
-            <h1 class="tableTitle">Administrator</h1>
-            <p class="update">Update Profile</p>
+        <div class="container-fluid">
+            <div class="card card-pic">
+                <img src="../images/default_profile_pic.png" alt="">
+                <h1 class="tableTitle">Username</h1>
+                <p class="update">Update Profile</p>
+            </div>
+            <div class="card card-pic p-3">
+                <div class="header">
+                    <h5 class="modal-title">Transaction Summary:</h5>
+                </div>
+                <hr>
+                <div class="body">
+                    <!-- scrollable to -->
+                    <div class="mb-3 d-flex justify-content-between">
+                        <label class="text-custom" for="serviceName">Date/Time:</label>
+                        <input type="text" class="border-0" id="serviceName" value="dd/mm/yyyy  3:30pm">
+                    </div>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <label class="text-custom" for="serviceName">Service:</label>
+                        <input type="text" class="border-0" id="serviceName" value="Bunot">
+                    </div>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <label class="text-custom" for="serviceName">Price:</label>
+                        <input type="text" class="border-0" id="serviceName" value="&#8369 500">
+                    </div>
+                    <hr>
+                    <!-- scrollable to hanggang dito -->
+                </div>
+            </div>
         </div>
         <div class="card card-info">
             <div class="container mt-4">
@@ -194,6 +228,7 @@
             </div>
         </div>
     </div>
+
     <script>
         // Get references to the buttons and form fields
         const updateProfileBtn = document.getElementById('updateProfileBtn');
