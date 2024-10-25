@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
-    <title>Dashboard</title>
+    <title>Guest Dashboard</title>
 </head>
 <style>
     html, body {
@@ -17,7 +17,7 @@
         min-height: 100vh;
     }
     body{
-        background: #F4F4F4;
+        background: #F4F4F4 !important;
         display: flex;
         flex-direction: column;
         font-family: Arial, sans-serif;
@@ -27,21 +27,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 10px;
-    }
-
-    form {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-        margin-right: 10px;
-    }
-    h3 {
-        text-align: center;
-        color: #008B7B;
     }
 
     /* Change the background color of the entire calendar */
@@ -117,7 +102,7 @@
         z-index: 1050;
     }
 
-    #showModal.show {
+    #secondModal.show {
         z-index: 1060;
     }
     .input-group {
@@ -126,63 +111,15 @@
 </style>
 <body>
     <?php 
-        include "../navigators/patient_sidebar.php";
-        include "../navigators/patient_header.php";
+        include "../navigators/guest_header.php";
+        include "../navigators/guest_sidebar.php";
     ?>
-
     <div class="content">
-        <div class="sub-nav">
-            <p class="highlighted">Dashboard | </p>
-            <p>Appointments | </p>
-            <p>Profile</p>
-        </div>
-
-        <div style="display: flex; margin: 15px;">
-        <!-- Calendar on the left side -->
-        <div id="calendar" style="width: 70%; padding: 20px;"></div>
-
         
-        <!-- Schedule form on the right side -->
-        <div style="width: 30%; padding: 20px; background-color: #f7f7f7;">
-            
-            <form id="scheduleForm">
-                <div class="mb-3">
-                    <label for="patient" class="form-label">Patient Name:</label>
-                    <input type="text" class="form-control" id="patient" disabled />
-                </div>
-                <div class="mb-3">
-                    <label for="date" class="form-label">Date</label>
-                    <input type="text" class="form-control" id="date" disabled />
-                </div>
-                <div class="mb-3">
-                    <label for="service" class="form-label">Service</label>
-                    <select class="form-select" id="service">
-                        <option>Tooth Extraction</option>
-                        <option>Cleaning</option>
-                        <option>Braces</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="time" class="form-label">Start/End Time</label>
-                    <input type="text" class="form-control" id="time" placeholder="Start Time - End Time" />
-                </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Service Price</label>
-                    <input type="text" class="form-control" id="price" value="3,000" disabled>
-                </div>
-                <div class="mb-3">
-                    <label for="reservationFee" class="form-label">Reservation Fee</label>
-                    <input type="text" class="form-control" id="reservationFee" value="100" disabled>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-success">Appoint</button>
-                    <button type="button" class="btn btn-danger">Cancel</button>
-                </div>
-            </form>
-
+        <div style="display: flex; margin: 15px;">
+            <!-- Calendar on the left side -->
+            <div id="calendar" style="width: 100%; padding: 20px;"></div>
         </div>
-
-    </div>
 
         <!-- information modal -->
         <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-hidden="true">
@@ -198,12 +135,6 @@
                         <button type="button" class="btn btn-primary" id="openSchedModal">
                             Your Schedule
                         </button>
-                        <button type="button" class="btn btn-info" id="openShowModal">
-                            Show
-                        </button>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="sched" value="ex. 8:00am - 9:00am" placeholder="Enter Schedule dynamically">
                         <button type="button" class="btn btn-info" id="openShowModal">
                             Show
                         </button>
@@ -274,6 +205,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
         <script>
+
             //function for show modal
             document.getElementById('openShowModal').addEventListener('click', function () {
                 // Open the second modal programmatically
@@ -400,24 +332,8 @@
 
                 calendar.render();
             });
-
-            $(document).ready(function() {
-                $('#myTable').DataTable({
-                    paging: true, // Enable pagination
-                    pageLength: 10, // Number of rows per page
-                    lengthMenu: [5, 10, 25, 50], // Options for rows per page
-                    searching: true, // Enable the search box
-                    ordering: true, // Enable sorting on columns
-                    info: true, // Display "Showing X to Y of Z entries"
-                    dom: 'lfrtip' // Remove buttons, keep pagination, search, and table layout
-                });
-            });
         </script>
-
     </div>
-
-    <?php 
-        include "../navigators/admin_footer.php";
-    ?>
+    <?php include '../navigators/admin_footer.php' ?>
 </body>
 </html>

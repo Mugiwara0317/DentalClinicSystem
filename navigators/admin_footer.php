@@ -11,10 +11,10 @@
         position: relative;
         padding: 10px;
     }
-    p{
+    .footer {
         color: #00453D;
         text-align: center;
     }
 </style>
-    <p>Copyright @2024 Happy Smile Dental Clinic</p>
+    <p class="footer">Copyright @2024 Happy Smile Dental Clinic</p>
 </footer>

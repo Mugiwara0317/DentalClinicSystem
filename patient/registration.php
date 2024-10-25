@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Smile Dental Clinic - Registration</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
@@ -22,74 +23,8 @@
             flex-direction: column;
             padding-top: 80px;
         }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #333;
-            height: 80px;
-            padding: 20px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-right: auto;
-        }
-
-        .logo-circle,
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .clinic-name {
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .nav-center {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-right: 20px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .public-home-btn {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .public-home-btn:hover {
-            text-decoration: underline;
-        }
-
-        .book-now-btn {
-            background-color: #008B7B;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .book-now-btn:hover {
-            background-color: transparent;
+        .header{
+            margin-top: 120px;
         }
 
         .registration-form {
@@ -167,6 +102,7 @@
             cursor: pointer;
             width: 50%;
             margin: 0 auto;
+            margin-top: 35px;
         }
 
         .submit-btn:hover {
@@ -190,18 +126,9 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../images/logo.png" alt="Clinic Logo">
-            <span class="clinic-name">HAPPY SMILE DENTAL CLINIC</span>
-        </div>
-        <nav class="nav-center">
-            <a href="#" class="public-home-btn">Home</a>
-            <a href="#" class="public-home-btn">Contact</a>
-            <span class="login-text">Login</span>
-            <a href="#" class="book-now-btn">Book Now</a>
-        </nav>
-    </header>
+    <?php 
+        include "../navigators/initial_header.php";
+    ?>
     
     <div class="registration-form">
         <div class="register-title-container">
@@ -276,7 +203,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
             <button type="submit" class="submit-btn">Submit</button>
-            <p class="info-text">Already have an account? <a href="#" class="contact-us">Login</a></p>
+            <p class="info-text">Already have an account? <a href="patient_login.php" class="contact-us">Login</a></p>
         </form>
     </div>
 </body>

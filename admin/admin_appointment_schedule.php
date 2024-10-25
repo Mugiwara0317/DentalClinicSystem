@@ -257,12 +257,6 @@
                         Show
                     </button>
                 </div>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="sched" value="" placeholder="Enter Schedule dynamically">
-                    <button type="button" class="btn btn-info" id="openSecondModal">
-                        Show
-                    </button>
-                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -276,11 +270,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="secondModalLabel">Second Modal</h5>
+                <h5 class="modal-title" id="secondModalLabel">Oct/2/2024 : 8:00am - 9:00am</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Content of the second modal.
+                <div class="mb-3">
+                    <label for="service" class="form-label">Service:</label>
+                    <input type="text" class="form-control" id="service" value="Ex. Tooth Extraction" disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Patient Name:</label>
+                    <input type="text" class="form-control" id="name" value="John Light Smith" disabled>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
